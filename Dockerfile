@@ -7,6 +7,7 @@ MAINTAINER Golfen Guo <golfen.guo@daocloud.io>
 COPY . /usr/share/nginx/html
 
 EXPOSE 80
+EXPOSE 443
 
 # Start Nginx and keep it running background and start php
 CMD sed -i "s/ContainerID: /ContainerID: "$(hostname)"/g" /usr/share/nginx/html/index.html && nginx -g "daemon off;"
